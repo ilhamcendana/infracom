@@ -1,0 +1,122 @@
+@import "../../assets/styles/colors.module";
+@import "../../assets/styles/typographies.module";
+@import "../../assets/styles/values.module.scss";
+
+.profile {
+    .top {
+        min-height: 538px;
+        padding: 85px 16px 0 16px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .text-container {
+            p {
+                color: $black;
+                &:nth-child(1) {
+                    @include title1semiBold;
+                    margin-bottom: 20px;
+
+                    span {
+                        color: $mango;
+                    }
+                }
+                &:nth-child(2) {
+                    @include subtitle4regular;
+                }
+            }
+        }
+
+        .lottie-container {
+            width: 238px;
+            height: 238px;
+        }
+    }
+    .bottom {
+        padding: 0 16px 0 16px;
+        box-sizing: border-box;
+        .headTitle {
+            @include title4semiBold;            
+            text-align: center;
+            margin-bottom: 32px;
+        }
+        .abouts {
+            text-align: center;
+            margin-bottom: 30px;
+            .about-title {
+                @include subtitle3regular;
+                color: $mango;
+                font-weight: 600;
+                margin-bottom: 12px;
+            }
+            .item-title {
+                @include subtitle4regular;
+                color: $black;
+                font-weight: 600;
+                margin-bottom: 8px;
+            }
+            .item-body {
+                @include subtitle4regular;
+                color: $black;
+                max-width: 250px;
+                margin: 0 auto 16px auto;
+            }
+            a {
+                @include subtitle4regular;
+                text-decoration: none;
+                margin-bottom: 16px;
+                display: inline-block;
+                color: $pepsi;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: $tablet-width) {
+    .profile {
+        padding: 65px 76px 0 76px;
+        box-sizing: border-box;
+
+        .top {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+
+            .text-container {
+                width: 50%;
+                p {
+                    &:nth-child(2) {
+                        width: 357px;
+                    }
+                }
+            }
+            .lottie-container {
+                width: 50%;
+            }
+        }
+        .bottom {
+            .headTitle {
+                font-size: 38px;
+                margin-bottom: 80px;
+            }            
+            .about-container {
+                display: flex;
+                justify-content: space-between;
+
+                .abouts {
+                    text-align: left;
+                }
+                .subAbout-container {
+                    display: flex;
+
+                    .abouts {                        
+                        &:nth-child(1) {
+                            margin-right: 24px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

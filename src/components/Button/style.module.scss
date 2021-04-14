@@ -1,0 +1,25 @@
+@import "../../assets/styles/colors.module";
+@import "../../assets/styles/typographies.module";
+
+.button {
+    width: 100%;
+    border-radius: 10px;
+    height: 48px;
+    border: none;
+    cursor: pointer;
+    @include subtitle4regular;
+
+    &.primary {
+        background-color: $mango;
+        color: $milk;
+    }
+    &.secondary {
+        background-color: transparent;
+        border:1px solid $mango;
+        color: $mango;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}

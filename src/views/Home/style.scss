@@ -1,0 +1,157 @@
+@import "../../assets/styles/colors.module";
+@import "../../assets/styles/typographies.module";
+@import "../../assets/styles/values.module.scss";
+
+.home {
+    .top {
+        background-color: $mangoBg;
+        min-height: 638px;
+        padding: 85px 16px 0 16px;
+        box-sizing: border-box;
+        .text-greeting {
+            max-width: 400px;
+            margin:auto;
+            margin-bottom: 35px;
+            p {
+                color: $black;
+                &:nth-child(1) {
+                    @include title1semiBold;
+                    margin-bottom: 17px;
+                    span {
+                        color: $mango;
+                    }
+                }
+
+                &:nth-child(2) {
+                    max-width: 303px;
+                    margin-bottom: 40px;
+                    @include subtitle4regular;
+                }
+            }
+            .button-profile {
+                width: 164px;
+            }
+        }        
+    }
+    .bottom {
+        margin-top: 22px;
+        p {
+            margin: 0;
+        }
+        .headTitle {
+            @include title4semiBold;
+            text-align: center;
+            margin: 50px 0;            
+        }
+        .works-container {
+            width: 100%;
+            padding: 0 16px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: baseline;
+
+            .works {
+                width: 100%;
+                max-width: 417px;
+                min-height: 280px;
+                background-color: $milk;
+                box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.05);
+                border-radius: 10px;
+                padding: 16px 12px;
+                box-sizing: border-box;
+                position: relative;
+                margin-bottom: 20px;
+                padding-bottom: 50px;
+                box-sizing: border-box;
+
+                .info {
+                    display: flex;
+                    align-items: flex-start;
+
+                    img {
+                        width: 46px;
+                        height: 46px;
+                        border-radius: 5px;
+                        margin-right: 12px;
+                    }
+
+                    .subcontainer {
+                        p {
+                            margin: 0;
+                            &:nth-child(1) {
+                                @include subtitle4regular;
+                                color: $black;
+                                font-weight: 600;
+                            }
+                            &:nth-child(2) {
+                                @include body4regular;
+                                color: $greyMonkey;
+                            }
+                        }
+                    }
+                }
+                .desc {
+                    p {
+                        @include body4regular;
+                        color: $black;
+                        &:nth-child(1) {
+                            margin: 18px 0 12px 0;
+                        }
+                    }
+                }
+                .click-link {
+                    position: absolute;
+                    bottom: 16px;
+                    right: 12px;
+                    font-weight: 600;
+                    display: flex;
+                    align-items: center;
+
+                    a {
+                        text-decoration: none;
+                        @include body4regular;
+                        color: $pepsi;
+                        margin-right: 5px;
+                    }
+                    svg {
+                        color: $pepsi;
+                        width: 10px;
+                        height: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media only screen and (min-width:$tablet-width) {
+    .home {
+        .top{
+            display: flex;
+            padding:65px 76px 0 76px;
+            min-height: 700px;
+            align-items: center;
+            justify-content: space-between;
+
+            .text-greeting {
+                margin:0 0 35px 0;
+            }
+        }
+        .bottom {
+            .headTitle {
+                font-size: 38px;
+            }
+            .works-container {
+                padding: 0 76px;
+                flex-direction: row;
+
+                .works {
+                    margin-right: 20px;
+                }
+            }
+        }
+    }
+}

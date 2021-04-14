@@ -1,0 +1,22 @@
+@import '../../assets/styles/colors.module';
+@import '../../assets/styles/typographies.module';
+
+.input {
+    background-color: $greyLight;
+    padding:0 14px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border:none;
+    height: 48px;
+    display: block;
+    width: 100%;
+
+    &:focus{
+        outline: none;
+    }
+
+    &::placeholder {
+        @include subtitle4regular;
+        color:$greyMonkey;
+    }
+}

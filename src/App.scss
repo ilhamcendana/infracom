@@ -1,0 +1,18 @@
+@import './assets/styles/reset.scss';
+@import './assets/styles/values.module.scss';
+
+.App {
+    max-width: 1440px;
+    margin: auto;
+    position: relative;
+}
+
+.touchable-opacity { 
+    transition: .3s;
+    &:hover {
+        opacity: .8;
+    }
+    &:active {
+        opacity: .7;
+    }
+}

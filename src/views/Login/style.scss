@@ -1,0 +1,59 @@
+@import "../../assets/styles/colors.module";
+@import "../../assets/styles/typographies.module";
+@import "../../assets/styles/values.module.scss";
+
+.login-container {
+    .top-animation {
+        width: 100%;
+        min-height: 386px;
+        background-color: $mangoBg;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .login-form-container {
+        margin: auto;
+        margin-top: 19px;
+        padding: 0 16px;
+        box-sizing: border-box;
+        max-width: 425px;
+
+        p {
+            @include title3semiBold;
+            text-align: center;
+            margin-bottom: 35px;
+        }
+        .mrb {
+            margin-bottom: 30px;
+        }
+    }
+}
+
+@media only screen and (min-width: $tablet-width) {
+    .login-container {
+        display: flex;     
+        min-height: 100vh;               
+
+        .top-animation {
+            width: 50%;
+        }
+        .login-form-container {
+            margin: 0;
+            max-width: 50%;
+            width: 50%;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;            
+            p {
+                @include title1semiBold;
+            }
+            form {
+                width: 100%;
+                padding:0 90px;
+                box-sizing: border-box;
+            }
+        }
+    }
+}
